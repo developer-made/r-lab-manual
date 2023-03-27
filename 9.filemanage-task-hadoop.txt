@@ -1,0 +1,27 @@
+9. File management tasks in hadoop
+
+Aim:
+To demonstrate file management tasks in hadoop.
+
+Algorithm:
+Step 1: Start the process.
+Step 2: Open Apache hadoop.
+Step 3: To Create a new directory use mkdir.
+Step 4: To check directories in hdfs using ls.
+Step5: To copy localfile1 of the local file system to the Hadoop filesystem using
+put.
+Step 6: To copy the ‘test1’ file present in the local file system to the newDataFlair
+directory of Hadoop using copyFromLocal.
+Step 7: To copy the ‘testfile’ of the hadoop filesystem to the local file system using
+get.
+Step 8: To copy the ‘sample’ file present in the newDataFlair directory of HDFS to
+the local file system using copyToLocal.
+Step9: To move the DR1 directory to the DataFlair directory in HDFS using mv command.
+Step10: To move the files or directories from the source to a destination within
+HDFS using mv.
+Step11: To copy the ‘file1’ present in newDataFlair directory in HDFS to the
+dataflair directory of HDFS using cp.
+Step12: Stop the process.
+
+RESULT:
+Thus the above commands executed successfully.

@@ -1,0 +1,63 @@
+Program 5 : Import & Export Files
+
+AIM:
+To demonstrate the import and export files in R programming.
+
+Algorithm:
+Step 1: Start the process.
+Step 2: Open RStudio & open a new file.
+Step 3: Select “Source on Save” check box on the toolbar.
+Step 4: Create a csv file
+Step 5: Steps to be followed for import files
+Session->Set working directory->choose directory->folder
+Name.
+Step 6: To read a CSV file available in current
+Working directory read.csv() function.
+Step 7: Copy the code & paste it in the Console and run it.
+Step 8: Save the file.
+Step 9: Stop the process.
+
+CODING:
+data<-read.csv(“import.csv”)
+data
+data$name
+#Get all the people working in IT department
+retval<- subset(data, dept ==”IT”)
+print(retval)
+
+OUTPUT:
+
+>data<-read.csv(“import.csv”)
+>data
+id, name, salary, start_date, dept
+1 1 Rick 623.30 2012-01-01 IT
+2 2 Dan 515.20 2013-09-23 Operations
+3 3 Michelle 611.00 2014-11-15 IT
+4 4 Ryan 729.00 2014-05-11 HR
+5 NA Gary 843.25 2015-03-27 Finance
+6 6 Nina 578.00 2013-05-21 IT
+7 7 Simon 632.80 2013-07-30 Operations
+8 8 Guru 722.50 2014-06-17 Finance
+
+>data$name
+
+name,
+1 Rick
+2 Dan
+3 Michelle
+4 Ryan
+5 Gary
+6 Nina
+7 Simon
+8 Guru
+
+>#Get all the people working in IT department
+>retval<- subset(data, dept ==”IT”)
+>print(retval)
+id name salary start_date dept
+1 1 Rick 623.3 2012-01-01 IT
+3 3 Michelle 611.0 2014-11-15 IT
+6 6 Nina 578.0 2013-05-21 IT
+
+RESULT:
+The above program executed and output is verified successfully.

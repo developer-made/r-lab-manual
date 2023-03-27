@@ -1,0 +1,92 @@
+Program 2 : Create Data frames using R Programming
+
+AIM:
+To create data frames using R programming.
+Algorithm:
+Step 1: Start the process.
+Step 2: Open RStudio and open a new file.
+Step 3: Select “Source on Save” check box on the toolbar.
+Step 4: Declare the variable.
+Step 5: Use dataframe function to list items as table.
+Step 6: Use $ symbol to list a particular column.
+Step 7: Copy the code & paste it in the Console and run it.
+Step 8: Save the file
+Step 9: Stop the process.
+
+Coding:
+
+data.frame(fruit_name = c("apple", "banana","orange"), fruit_cost =
+c(100,50,75), fruit_color = c("red", " yellow", "orange"), fruit_city =
+c("J&K", "Maharashtra", "Tamilnadu") ) -> fruit
+View(fruit)
+fruit$fruit_name
+fruit$fruit_cost
+fruit$fruit_color
+fruit$fruit_city
+fruit$fruit_name[2]
+fruit$fruit_city[3]
+summary(fruit)
+fruit$fruit_benefit <- c("v-A", "V-C", "V-C")
+data.frame(fruit_name = c("cherry", "strawberry","Pineapple"),
+fruit_cost = c(100,250,70), fruit_color = c("red", " Purple", "Yellow"),
+fruit_city = c("J&K", "Maharashtra", "Tamilnadu"), fruit_benefit =
+c("V-A", "V-B", "V-C") ) -> fruit_new
+View(fruit_new)
+>fruit_final <- rbind(fruit, fruit_new)
+>View(fruit_final)
+
+Output:
+data.frame(fruit_name = c("apple", "banana","orange"), fruit_cost =
+c(100,50,75), fruit_color = c("red", " yellow", "orange"), fruit_city = c("J&K",
+"Maharashtra", "Tamilnadu") ) -> fruit
+View(fruit)
+>fruit$fruit_name
+[1] "apple" "banana" "orange"
+>fruit$fruit_cost
+> fruit$fruit_cost
+[1] 100 50 75
+> fruit$fruit_color
+[1] "red" " yellow" "orange"
+> fruit$fruit_city
+[1] "J&K" "Maharashtra" "Tamilnadu"
+> fruit$fruit_name[2]
+[1] "banana"
+> fruit$fruit_city[3]
+[1] "Tamilnadu"
+> summary(fruit)
+fruit_name fruit_cost fruit_color
+fruit_city
+Length:3 Min. : 50.0 Length:3
+Length:3
+Class :character 1st Qu.: 62.5 Class :character
+Class :character
+Mode :character Median : 75.0 Mode :character
+Mode :character
+Mean : 75.0
+3rd Qu.: 87.5
+Max. :100.0
+> fruit$fruit_benefit <- c("v-A", "V-C", "V-C")
+> View(fruit)
+> summary(fruit)
+fruit_name fruit_cost fruit_color
+fruit_city
+Length:3 Min. : 50.0 Length:3
+Length:3
+Class :character 1st Qu.: 62.5 Class :character
+Class :character
+Mode :character Median : 75.0 Mode :character
+Mode :character
+Mean : 75.0
+3rd Qu.: 87.5
+Max. :100.0
+fruit_benefit
+Length:3
+Class :character
+Mode :character
+> View(fruit_new)
+>fruit_final <- rbind(fruit, fruit_new)
+>View(fruit_final)
+
+
+RESULT:
+The above program executed and output is verified successfully

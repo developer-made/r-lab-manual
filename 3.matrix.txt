@@ -1,0 +1,113 @@
+Program 3 : Demonstrate the working of matrix using R Programming
+
+AIM:
+To demonstrate the working of matrix using R programming.
+
+Algorithm:
+Step 1: Start the process.
+Step 2: Open RStudio and open a new file.
+Step 3: Select “Source on Save” check box on the toolbar.
+Step 4: Declare the matrix.
+Step 5: Access the particular rows and columns.
+Step 6: Perform arithmetic operations on matrices.
+Step 7: Perform transpose of matrix.
+Step 8: Copy the code & paste it in the Console and run it.
+Step 9: Save the file.
+Step 10: Stop the process.
+
+Coding:
+#Matrix declaration
+m1 <- matrix(c(1,2,3,4,5,6), nrow = 2 , ncol = 3,
+byrow = TRUE)
+is.matrix(m1)
+
+#Accessing 2nd row 2nd column
+m1[2,2]
+m1[,2]
+m2 <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+Add = m1 + m2
+sub = m1 - m2
+mul = m1 * m2
+div = m1 / m2
+class(m1)
+
+# Transpose of Matrix
+T <- t(m1)
+colSums(m1) # returns vector of column sums
+colMeans(m1)# returns vector of column mean
+rowSums(m1)
+rowMeans(m1)
+cbind(m1,m2) #Combine matrices(vectors) horizontally. Returns a matrix.
+rbind(m1,m2) # Combine matrices(vectors) vertically. Returns a matrix.
+
+Output
+
+> m1 <- matrix(c(1,2,3,4,5,6), nrow = 2 , ncol = 3,
+byrow = TRUE)
+> m1
+[,1] [,2] [,3]
+[1,] 1 2 3
+[2,] 4 5 6
+
+>is.matrix(m1)
+> [1] TRUE
+> m1[,2]
+[1] 2 5
+> m2 <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+> m2
+[,1] [,2] [,3]
+[1,] 1 3 5
+[2,] 2 4 6
+
+> add = m1 + m2
+> add
+[,1] [,2] [,3]
+[1,] 2 4 6
+[2,] 8 10 12
+
+> sub = m1 - m2
+> sub
+[,1] [,2] [,3]
+[1,] 0 0 0
+[2,] 0 0 0
+
+> mul = m1 * m2
+> mul
+[,1] [,2] [,3]
+[1,] 1 4 9
+[2,] 16 25 36
+> div = m1 / m2
+> div
+[,1] [,2] [,3]
+[1,] 1 1 1
+[2,] 1 1 1
+
+> class(m1)
+[1] "matrix" "array"
+> T <- t(m1)
+> T
+[,1] [,2]
+[1,] 1 4
+[2,] 2 5
+[3,] 3 6
+> colSums(m1)
+[1] 5 7 9
+> colMeans(m1)
+[1] 2.5 3.5 4.5
+> rowSums(m1)
+[1] 6 15
+> rowMeans(m1)
+[1] 2 5
+> cbind(m1,m2)
+[,1] [,2] [,3] [,4] [,5] [,6]
+[1,] 1 2 3 1 2 3
+[2,] 4 5 6 4 5 6
+> rbind(m1,m2)
+[,1] [,2] [,3]
+[1,] 1 2 3
+[2,] 4 5 6
+[3,] 1 2 3
+[4,] 4 5 6
+
+RESULT:
+The above program executed and output is verified successfully

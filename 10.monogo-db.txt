@@ -1,0 +1,39 @@
+10.MongoDB
+
+AIM:
+To demonstrate mongodb comments .
+
+Algorithm:
+Step 1: Start the process.
+Step 2: Open online mongodb compiler.
+Step 3: Create a new database.
+Step 4: Insert values to the new database.
+Step 5: To get the list of documents in collection use find().
+Step 6: To display records with limitations use limit().
+Step 7: To update a database use update() with the collection name.
+Step 8: To delete a database use remove().
+Step 9: Stop the process.
+
+COMMENTS:
+db
+show dbs
+use student// to create new database
+db.createCollection("list") // create
+
+Insert
+db.list.insert({name:”aaa”,age:”12”,coun:”in”})
+db.list.insertOne({name:”bbb”,age:”12”,coun:”jap”})
+db.list.insertMany([{name:”ccc”,age:”13”,coun:”ame”},
+{name:”ddd”,age:”12”,coun:”in”},{name:”eee”,age:”12”,coun:”in”}])
+
+Find:
+db.list. find()
+db.list.find().skip(1) // skip number of records (2)
+db.list.find().count()
+db.list.find().limit(4) // displays records upto the limit(3)
+
+For updating:
+db.list.update({name:”eee”,age:”12”,coun:”in”},
+{$set:{name:”eee”,age:”14”,coun:”ame”}})
+Deleting a record:
+db.list.remove({name:”aaa”})

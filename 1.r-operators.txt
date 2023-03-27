@@ -1,0 +1,134 @@
+Program 1 : Demonstrate the working of Operators in R Programming
+Aim:
+To demonstrate the working of operators in R programming.
+
+Algorithm:
+Step 1: Start the process.
+Step 2: Open RStudio & open a new file.
+Step 3: Select “Source on Save” check box on the toolbar.
+Step 4: Declare variables.
+Step 5: Perform Arithmetic operation +,-,*,/,%.
+Step 6: Perform Relational operation <,>,<=,>=,==.
+Step 7: Perform Logical Operation &,&&,|,||,!.
+Step 8: Copy the code & paste it in the Console and run it.
+Step 9: Save the file
+Step 10: Stop the process.
+
+Coding:
+# Variable Declaration
+n1 = 20
+n2 = 30
+log1 = TRUE
+log2 = FALSE
+vec1 <- c(1,2,3,4)
+vec2 <- c("a","b","c","d" )
+# Arithmetic operators
+n1 = 20
+n2 = 30
+add = n1 + n2
+sub = n1 - n2
+mul = n1 * n2
+div = n1 / n2
+mod = n1 %% n2
+# Relational Operators
+age <- 16
+if (!(age > 18)) {
+print("You are Too Young")
+} else if(age > 18 && age <= 35) {
+print("Young Guy")
+} else if(age == 36 || age <= 60) {
+print("You are Middle Age Person")
+} else {
+print("You are too Old")
+}
+
+# Logical Operators
+num1 <- c(TRUE, FALSE, 0, 23)
+num2 <- c(FALSE, FALSE, TRUE, TRUE)
+# Performs logical AND operation on each element in both num1, num2
+num1 & num2
+# Performs logical AND operation on first element in both num1, num2
+num1 && num2
+# Performs logical OR operation on each element in both num1, num2
+num1 | num2
+# Performs logical OR operation on first element in both num1, num2
+num1 || num2
+#This will convert all the num1 TRUE values to FALSE, and FALSE values to
+TRUE
+!num1
+# From num2 Vector - This will convert all the TRUE values to FALSE, and
+FALSE to TRUE
+!num2
+
+
+Output:
+> n1 = 20
+> n2 = 30
+>
+> n1
+[1] 20
+> n2
+[1] 30
+> class(num1)
+[1] "numeric"
+> log1 = TRUE
+> log2 = FALSE
+> log1
+[1] TRUE
+> class(log1)
+[1] "logical"
+> vec1 <- c(1,2,3,4)
+> vec2 <- c("a","b","c","d" )
+> vec1
+[1] 1 2 3 4
+> vec2
+[1] "a" "b" "c" "d"
+> n1 = 20
+> n2 = 30
+> add = n1 + n2
+> add
+[1] 50
+> sub = n1 - n2
+>sub
+[1] -10
+> mul = n1 * n2
+> mul
+[1] 600
+>div = n1 / n2
+>div
+[1] 0.6666667
+>mod = n1 %% n2
+> mod
+[1] 20
+> age <- 16
+> if (!(age > 18)) {
++ print("You are Too Young")
++ } else if(age > 18 && age <= 35) {
++ print("Young Guy")
++ } else if(age == 36 || age <= 60) {
++ print("You are Middle Age Person")
++ } else {
++ print("You are too Old")
++ }
+[1] "You are Too Young"
+>
+> num1 <- c(TRUE, FALSE, 0, 23)
+> num2 <- c(FALSE, FALSE, TRUE, TRUE)
+> num1 & num2
+[1] FALSE FALSE FALSE TRUE
+> num1 && num2
+[1] FALSE
+> num1 | num2
+[1] TRUE FALSE TRUE TRUE
+> num1 | num2
+[1] TRUE FALSE TRUE TRUE
+> num1 || num2
+[1] TRUE
+> !num1
+[1] FALSE TRUE TRUE FALSE
+> !num1
+[1] FALSE TRUE TRUE FALSE
+
+
+RESULT:
+The above program executed and output is verified successfully

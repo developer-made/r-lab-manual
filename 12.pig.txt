@@ -1,0 +1,247 @@
+12.PIG
+
+AIM:
+To demonstrate the pig queries using pig compiler.
+
+Algorithm:
+Step 1: Start the process.
+Step 2: Open online Pig compiler.
+Step 3: Create a new database.
+Step 4: To store the loaded data in the file system use the STORE operator.
+Step 5: To execute use the grunt shell.
+Step 6: Stop the process.
+
+SYNTAX
+STORE Relation_name INTO ' required_directory_path ' [USING function];
+Student_data.txt
+001,Rajiv,Reddy,9848022337,Hyderabad
+002,siddarth,Battacharya,9848022338,Kolkata
+003,Rajesh,Khanna,9848022339,Delhi
+004,Preethi,Agarwal,9848022330,Pune
+005,Trupthi,Mohanthy,9848022336,Bhuwaneshwar
+006,Archana,Mishra,9848022335,Chennai.
+grunt> student = LOAD 'hdfs://localhost:9000/pig_data/student_data.txt'
+USING PigStorage(',')
+as ( id:int, firstname:chararray, lastname:chararray, phone:chararray,
+city:chararray );
+grunt> STORE student INTO ' hdfs://localhost:9000/pig_Output/ ' USING PigStorage (',');
+
+
+Output
+2015-10-05 13:05:05,429 [main] INFO
+org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.
+MapReduceLau ncher - 100% complete
+2015-10-05 13:05:05,429 [main] INFO org.apache.pig.tools.pigstats.mapreduce.SimplePigStats -
+Script Statistics:
+HadoopVersion PigVersion UserId StartedAt FinishedAt Features
+2.6.0 0.15.0 Hadoop 2015-10-0 13:03:03 2015-10-05 13:05:05 UNKNOWN
+Success!
+Job Stats (time in seconds):
+JobId Maps Reduces MaxMapTime MinMapTime AvgMapTime MedianMapTime
+job_14459_06 1 0 n/a n/a n/a n/a
+MaxReduceTime MinReduceTime AvgReduceTime MedianReducetime Alias Feature
+0 0 0 0 student MAP_ONLY
+OutPut folder
+hdfs://localhost:9000/pig_Output/
+Input(s): Successfully read 0 records from: "hdfs://localhost:9000/pig_data/student_data.txt"
+Output(s): Successfully stored 0 records in: "hdfs://localhost:9000/pig_Output"
+
+Counters:
+Total records written : 0
+Total bytes written : 0
+Spillable Memory Manager spill count : 0
+Total bags proactively spilled: 0
+Total records proactively spilled: 0
+Job DAG: job_1443519499159_0006
+2015-10-05 13:06:06,192 [main] INFO org.apache.pig.backend.hadoop.executionengine
+.mapReduceLayer.MapReduceLau ncher - Success!
+Sample programs
+The readline function
+#Example1
+readinteger <- function()
+{
+n <- readline(prompt="Enter an integer: ")
+return(as.integer(n))
+}
+print(readinteger())
+# Example2
+readinteger <- function()
+{
+n <- readline(prompt="Enter an integer: ")
+n <- as.integer(n)
+if (is.na(n)){
+n <- readinteger()
+}
+return(n)
+}
+print(readinteger())
+create a dataframe in R
+# Create a, b, c, d variables
+a <- c(10,20,30,40)
+b <- c('book'
+,
+'pen'
+,
+'textbook'
+,
+'pencil_case')
+c <- c(TRUE,FALSE,TRUE,FALSE)
+d <- c(2.5, 8, 10, 7)
+# Join the variables to create a data frame
+df <- data.frame(a,b,c,d)
+df
+# Name the data frame
+names(df) <- c('ID'
+,
+'items'
+,
+'store'
+,
+'price')
+df
+# Print the structure
+str(df)
+## Select row 1 in column 2
+df[1,2]
+## Select Rows 1 to 2
+df[1:2,]
+## Select Columns 1
+df[,1]
+# Slice with columns name
+df[, c('ID'
+,
+'store')]
+# Create a new vector
+quantity <- c(10, 35, 40, 5)
+# Add `quantity` to the `df` data frame
+df$quantity <- quantity
+df
+# Select the column ID
+df$ID
+# Select price above 5
+subset(df, subset = price > 5)
+MEAN MEDIAN MODE
+# Create a vector.
+x <- c(12,7,3,4.2,18,2,54,-21,8,-5)
+# Find Mean.
+result.mean <- mean(x)
+print(result.mean)
+# Create a vector.
+x <- c(12,7,3,4.2,18,2,54,-21,8,-5)
+# Find Mean.
+result.mean <- mean(x,trim = 0.3)
+print(result.mean)
+# Create a vector.
+x <- c(12,7,3,4.2,18,2,54,-21,8,-5,NA)
+# Find mean.
+result.mean <- mean(x)
+print(result.mean)
+# Find mean dropping NA values.
+result.mean <- mean(x,na.rm = TRUE)
+print(result.mean)
+# Create the vector.
+x <- c(12,7,3,4.2,18,2,54,-21,8,-5)
+# Find the median.
+median.result <- median(x)
+print(median.result)
+# Create the function.
+getmode <- function(v) {
+uniqv <- unique(v)
+uniqv[which.max(tabulate(match(v, uniqv)))]
+}
+# Create the vector with numbers.
+v <- c(2,1,2,3,1,2,3,4,1,5,5,3,2,3)
+# Calculate the mode using the user function.
+result <- getmode(v)
+print(result)
+# Create the vector with characters.
+charv <- c("o"
+,
+"it"
+,
+"the"
+,
+"it"
+,
+"it")
+# Calculate the mode using the user function.
+result <- getmode(charv)
+print(result)
+Line Graphs
+plot(1:10, type="l"
+, col="blue")
+Scatter Plots
+x <- c(5,7,8,7,2,2,9,4,11,12,9,6)
+y <- c(99,86,87,88,111,103,87,94,78,77,85,86)
+plot(x, y)
+x <- c(5,7,8,7,2,2,9,4,11,12,9,6)
+y <- c(99,86,87,88,111,103,87,94,78,77,85,86)
+plot(x, y, main="Observation of Cars"
+, xlab="Car age"
+, ylab="Car speed")
+Compare Plots
+# day one, the age and speed of 12 cars:
+x1 <- c(5,7,8,7,2,2,9,4,11,12,9,6)
+y1 <- c(99,86,87,88,111,103,87,94,78,77,85,86)
+# day two, the age and speed of 15 cars:
+x2 <- c(2,2,8,1,15,8,12,9,7,3,11,4,7,14,12)
+y2 <- c(100,105,84,105,90,99,90,95,94,100,79,112,91,80,85)
+plot(x1, y1, main="Observation of Cars"
+, xlab="Car age"
+, ylab="Car
+speed"
+, col="red"
+, cex=2)
+points(x2, y2, col="blue"
+, cex=2)
+Pie Charts
+# Create a vector of pies
+x <- c(10,20,30,40)
+# Display the pie chart
+pie(x)
+# Create a vector of pies
+x <- c(10,20,30,40)
+# Create a vector of labels
+mylabel <- c("Apples"
+,
+"Bananas"
+,
+"Cherries"
+,
+"Dates")
+# Display the pie chart with labels
+pie(x, label = mylabel, main = "Fruits")
+# Create a vector of colors
+colors <- c("blue"
+,
+"yellow"
+,
+"green"
+,
+"black")
+# Display the pie chart with colors
+pie(x, label = mylabel, main = "Fruits"
+, col = colors)
+Legend
+# Create a vector of labels
+mylabel <- c("Apples"
+,
+"Bananas"
+,
+"Cherries"
+,
+"Dates")
+# Create a vector of colors
+colors <- c("blue"
+,
+"yellow"
+,
+"green"
+,
+"black")
+# Display the pie chart with colors
+pie(x, label = mylabel, main = "Pie Chart"
+, col = colors)
+# Display the explanation box
+legend("bottomright"
+, mylabel, fill = colors)

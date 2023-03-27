@@ -1,0 +1,36 @@
+11.HIVE
+
+AIM:
+To demonstrate Hive queries using hive compiler.
+
+Algorithm:
+Step 1: Start the process.
+Step 2: Open online Hive compiler.
+Step 3: Create a new database.
+Step 4: Use load operation to move the data into corresponding hive table.
+Step 5: To display all the data’s use select* query.
+Step 6: To remove the entire table use drop query.
+Step 7: To create an external table use CREATE EXTERNAL query.
+Step 8: Stop the process.
+
+Hive>CREATE TABLE guruhive_internaltable (id INT,Name STRING);
+Row format delimited
+Fields terminated by '\t';
+Load the data into internal table
+Hive>LOAD DATA INPATH '/user/guru99hive/data.txt' INTO table
+guruhive_internaltable;
+Display the content of the table
+Hive>select * from guruhive_internaltable;
+To drop the internal table
+Hive>DROP TABLE guruhive_internaltable;
+Create External table
+Hive>CREATE EXTERNAL TABLE guruhive_external(id INT,Name STRING)
+
+Row format delimited
+Fields terminated by '\t'
+LOCATION '/user/guru99hive/guruhive_external;
+Display the content of the table
+Hive>select * from guruhive_external;
+To drop the internal table
+
+Hive>DROP TABLE guruhive_external;
