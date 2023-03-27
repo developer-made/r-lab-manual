@@ -1,7 +1,7 @@
 # r-lab-manual
 
 
-use this commands
+9.use this commands hadoop
 
 ![hadoop-cmd2](https://user-images.githubusercontent.com/115597780/228026588-96325376-eb5d-4367-b177-30595ccfee43.png)
 ![hadoop-cmd](https://user-images.githubusercontent.com/115597780/228026595-f58ebc99-f24c-475a-839a-126e885012fb.png)
