@@ -16,98 +16,90 @@ Step 9: Save the file.
 Step 10: Stop the process.
 
 Coding:
-#Matrix declaration
-m1 <- matrix(c(1,2,3,4,5,6), nrow = 2 , ncol = 3,
-byrow = TRUE)
-is.matrix(m1)
+#Matrix a
+a <- matrix(c(1,2,3,4,5,6), nrow = 2 , ncol = 3)
+print(a)
+#Matrix a
+b<- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+print(b)
+#add
+print(a+b)
+#sub
+print(a-b)
+#mut
+print(a*b)
+#div
+print(a/b)
+#Transpose of Matrix in a
+print(t(a))
+print(colSums(a))
+print(colMeans(a))
+print(rowSums(a))
+print(rowMeans(a))
+#Transpose of Matrix in a and b
+print(cbind(a,b))
+print(rbind(a,b))
 
-#Accessing 2nd row 2nd column
-m1[2,2]
-m1[,2]
-m2 <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
-Add = m1 + m2
-sub = m1 - m2
-mul = m1 * m2
-div = m1 / m2
-class(m1)
-
-# Transpose of Matrix
-T <- t(m1)
-colSums(m1) # returns vector of column sums
-colMeans(m1)# returns vector of column mean
-rowSums(m1)
-rowMeans(m1)
-cbind(m1,m2) #Combine matrices(vectors) horizontally. Returns a matrix.
-rbind(m1,m2) # Combine matrices(vectors) vertically. Returns a matrix.
 
 Output
 
-> m1 <- matrix(c(1,2,3,4,5,6), nrow = 2 , ncol = 3,
-byrow = TRUE)
-> m1
-[,1] [,2] [,3]
-[1,] 1 2 3
-[2,] 4 5 6
-
->is.matrix(m1)
-> [1] TRUE
-> m1[,2]
-[1] 2 5
-> m2 <- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
-> m2
-[,1] [,2] [,3]
-[1,] 1 3 5
-[2,] 2 4 6
-
-> add = m1 + m2
-> add
-[,1] [,2] [,3]
-[1,] 2 4 6
-[2,] 8 10 12
-
-> sub = m1 - m2
-> sub
-[,1] [,2] [,3]
-[1,] 0 0 0
-[2,] 0 0 0
-
-> mul = m1 * m2
-> mul
-[,1] [,2] [,3]
-[1,] 1 4 9
-[2,] 16 25 36
-> div = m1 / m2
-> div
-[,1] [,2] [,3]
-[1,] 1 1 1
-[2,] 1 1 1
-
-> class(m1)
-[1] "matrix" "array"
-> T <- t(m1)
-> T
-[,1] [,2]
-[1,] 1 4
-[2,] 2 5
-[3,] 3 6
-> colSums(m1)
-[1] 5 7 9
-> colMeans(m1)
-[1] 2.5 3.5 4.5
-> rowSums(m1)
-[1] 6 15
-> rowMeans(m1)
-[1] 2 5
-> cbind(m1,m2)
-[,1] [,2] [,3] [,4] [,5] [,6]
-[1,] 1 2 3 1 2 3
-[2,] 4 5 6 4 5 6
-> rbind(m1,m2)
-[,1] [,2] [,3]
-[1,] 1 2 3
-[2,] 4 5 6
-[3,] 1 2 3
-[4,] 4 5 6
+> #Matrix a
+> a <- matrix(c(1,2,3,4,5,6), nrow = 2 , ncol = 3)
+> print(a)
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+> #Matrix a
+> b<- matrix(c(1,2,3,4,5,6), nrow = 2, ncol = 3)
+> print(b)
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+> #add
+> print(a+b)
+     [,1] [,2] [,3]
+[1,]    2    6   10
+[2,]    4    8   12
+> #sub
+> print(a-b)
+     [,1] [,2] [,3]
+[1,]    0    0    0
+[2,]    0    0    0
+> #mut
+> print(a*b)
+     [,1] [,2] [,3]
+[1,]    1    9   25
+[2,]    4   16   36
+> #div
+> print(a/b)
+     [,1] [,2] [,3]
+[1,]    1    1    1
+[2,]    1    1    1
+> #Transpose of Matrix in a
+> print(t(a))
+     [,1] [,2]
+[1,]    1    2
+[2,]    3    4
+[3,]    5    6
+> print(colSums(a))
+[1]  3  7 11
+> print(colMeans(a))
+[1] 1.5 3.5 5.5
+> print(rowSums(a))
+[1]  9 12
+> print(rowMeans(a))
+[1] 3 4
+> #Transpose of Matrix in a and b
+> print(cbind(a,b))
+     [,1] [,2] [,3] [,4] [,5] [,6]
+[1,]    1    3    5    1    3    5
+[2,]    2    4    6    2    4    6
+> print(rbind(a,b))
+     [,1] [,2] [,3]
+[1,]    1    3    5
+[2,]    2    4    6
+[3,]    1    3    5
+[4,]    2    4    6
 
 RESULT:
 The above program executed and output is verified successfully
